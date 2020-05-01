@@ -1,0 +1,72 @@
+﻿@using System.Collections
+@using System.Web.UI.WebControls
+@using Microsoft.AspNet.Identity
+@model OneCasa.Models.ViewModels.Leave
+@{
+    IEnumerable list;
+    list = new List<ListItem>
+{
+        new ListItem{Text = "Full Day",Value = "fullday"},
+        new ListItem{Text = "Half Day",Value = "halfday"},
+        new ListItem{Text = "Birth Day",Value = "birthday"},
+        new ListItem{Text = "Paternity",Value = "Paternity"},
+          };
+    SelectList leaveType = new SelectList(list, "value", "text");
+    Layout = "";
+
+}
+    <div class="container">
+        @using (Html.BeginForm("ApplyLeave", "Leaves", null, FormMethod.Post, new { @class = "form-horizontal" }))
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-group">
+                @*<label>@Html.DisplayNameFor(e => e.Email)</label>*@
+                @Html.HiddenFor(e => e.Email, new {   Value =User.Identity.GetUserName() })
+                @*@Html.ValidationMessageFor(e => e.Email, "", new { @class = "text-danger" })*@
+            </div>
+
+            <div class="form-group">
+                <label>@Html.DisplayNameFor(e => e.LeaveType)</label>
+                @Html.DropDownListFor(e => e.LeaveType, leaveType, "select LeaveType", new { @class = "form-control" })
+                @Html.ValidationMessageFor(e => e.LeaveType, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group">
+                <label>@Html.DisplayNameFor(e => e.FromDate)</label>
+                @Html.TextBoxFor(e => e.FromDate, "", new
+                {
+                    @class = "form-control",
+                    type = "date",
+                    Value = $"{DateTime.Now.Year}-{@DateTime.Now.GetDateTimeFormats()[2].Substring(0, 2)}-{@DateTime.Now.GetDateTimeFormats()[2].Substring(3, 2)}"
+                })
+                @Html.ValidationMessageFor(e => e.FromDate, "", new { @class = "text-danger" })
+            </div>
+
+
+            <div class="form-group">
+                <label>@Html.DisplayNameFor(e => e.ToDate)</label>
+                @Html.TextBoxFor(e => e.ToDate, "{0:yyyy-MM-dd}", new
+                {
+                    @class = "form-control",
+                    type = "date",
+                    Value = $"{DateTime.Now.Year}-{@DateTime.Now.GetDateTimeFormats()[2].Substring(0, 2)}-{@DateTime.Now.GetDateTimeFormats()[2].Substring(3, 2)}"
+                })
+                @Html.ValidationMessageFor(e => e.ToDate, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group">
+                <label>@Html.DisplayNameFor(e => e.Comment)</label>
+                @Html.TextAreaFor(e => e.Comment, new { @class = "form-control", PlaceHolder = "Comment",rows=3  })
+                @Html.ValidationMessageFor(e => e.Comment, "", new { @class = "text-danger"})
+            </div>
+
+            <input type="submit" value="Apply" class="btn btn-success" />
+
+        }
+    </div>
+
+
+<script src="~/Scripts/jquery-3.3.1.js"></script>
+<script src="~/Scripts/jquery.validate.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.js"></script>

@@ -1,0 +1,12 @@
+﻿
+@using OneCasa.Models.UserRoles;
+@{
+    if (User.IsInRole(RoleName.Admin) || User.IsInRole(RoleName.HR))
+    {
+         Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+    }
+    else
+    {
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+}

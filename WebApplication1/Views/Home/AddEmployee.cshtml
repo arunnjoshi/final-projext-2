@@ -1,0 +1,101 @@
+﻿@using System.Web.UI.WebControls
+@model OneCasa.Models.ViewModels.EmployeeAddress
+
+@{
+    var list = new List<ListItem>
+{
+        new ListItem{Text = "Male",Value = "male"},
+        new ListItem{Text = "Female",Value = "female"},
+        new ListItem{Text = "Others",Value = "other"},
+    };
+    SelectList gender = new SelectList(list, "value", "text");
+}
+
+
+<div class="container shadow p-3 mb-5 bg-white rounded">
+    <h4 class="text-center">Add Employee Form</h4>
+    @using (Html.BeginForm("AddEmployee", "home", null, FormMethod.Post, new { @class = "form-horizontal" }))
+    {
+        <div class="form-group">
+            <label>@Html.DisplayNameFor(e => e.EmpName)</label>
+            @Html.TextBoxFor(e => e.EmpName, new { @class = "form-control", @PlaceHolder = "Employee Name" })
+            @Html.ValidationMessageFor(e => e.EmpName, "", new { @class = "text-danger" })
+        </div>
+
+
+        <div class="form-group">
+            <label>@Html.DisplayNameFor(e => e.Gender)</label>
+            @Html.DropDownListFor(e => e.Gender, @gender, "select Gender", new { @class = "form-control" })
+            @Html.ValidationMessageFor(e => e.Email, "", new { @class = "text-danger" })
+        </div>
+
+
+        <div class="form-group">
+            <label>@Html.DisplayNameFor(e => e.Email)</label>
+            @Html.TextBoxFor(e => e.Email, new { @class = "form-control", @PlaceHolder = "Email", type = "email" })
+            @Html.ValidationMessageFor(e => e.Email, "", new { @class = "text-danger" })
+        </div>
+
+
+        <div class="form-group">
+            <label>@Html.DisplayNameFor(e => e.Manager)</label>
+            @Html.TextBoxFor(e => e.Manager, new { @class = "form-control", @PlaceHolder = "Manager" })
+            @Html.ValidationMessageFor(e => e.Manager, "", new { @class = "text-danger" })
+        </div>
+
+
+        <div class="form-group">
+            <label>@Html.DisplayNameFor(e => e.Department)</label>
+            @Html.DropDownListFor(e => e.Department, ViewBag.Departments as SelectList, "select department", new { @class = "form-control" })
+            @Html.ValidationMessageFor(e => e.Department, "", new { @class = "text-danger" })
+        </div>
+
+
+        <div class="form-group">
+            <label>@Html.DisplayNameFor(e => e.DateOfBirth)</label>
+            @Html.TextBoxFor(e => e.DateOfBirth, new { @class = "form-control", @PlaceHolder = "date of birth", type = "date" })
+            @Html.ValidationMessageFor(e => e.DateOfBirth, "", new { @class = "text-danger" })
+        </div>
+
+
+        <div class="form-group">
+            <label>@Html.DisplayNameFor(e => e.PhoneNumber)</label>
+            @Html.TextBoxFor(e => e.PhoneNumber, new { @class = "form-control", @PlaceHolder = "Phone Number", type = "number" })
+            @Html.ValidationMessageFor(e => e.PhoneNumber, "", new { @class = "text-danger" })
+        </div>
+
+
+        <div class="form-group">
+            <label>@Html.DisplayNameFor(e => e.Address)</label>
+            @Html.TextBoxFor(e => e.Address, new { @class = "form-control", @PlaceHolder = "Address" })
+            @Html.ValidationMessageFor(e => e.Address, "", new { @class = "text-danger" })
+        </div>
+
+
+        <div class="form-group">
+            <label>@Html.DisplayNameFor(e => e.State)</label>
+            @Html.TextBoxFor(e => e.State, new { @class = "form-control", @PlaceHolder = "State" })
+            @Html.ValidationMessageFor(e => e.State, "", new { @class = "text-danger" })
+        </div>
+
+
+        <div class="form-group">
+            <label>@Html.DisplayNameFor(e => e.PinCode)</label>
+            @Html.TextBoxFor(e => e.PinCode, new { @class = "form-control", @PlaceHolder = "Pincode", type = "number" })
+            @Html.ValidationMessageFor(e => e.PinCode, "", new { @class = "text-danger" })
+        </div>
+
+
+        <div class="form-group">
+            <label>@Html.DisplayNameFor(e => e.Country)</label>
+            @Html.TextBoxFor(e => e.Country, new { @class = "form-control", @PlaceHolder = "Country" })
+            @Html.ValidationMessageFor(e => e.Country, "", new { @class = "text-danger" })
+        </div>
+
+        <button type="submit" class="btn btn-primary">Save</button>
+
+    }
+</div>
+<script src="~/Scripts/jquery-3.3.1.js"></script>
+<script src="~/Scripts/jquery.validate.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.js"></script>

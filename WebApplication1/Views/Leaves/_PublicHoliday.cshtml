@@ -1,0 +1,16 @@
+﻿<h5 class="text-center">Public holidays</h5>
+<table class="table table-bordered">
+    <thead>
+    <td>Name</td>
+    <td>Date</td>
+    </thead>
+    <tbody>
+        @foreach (var holiday in ViewBag.PubluicHolidays)
+        {
+            <tr>
+                <td>@holiday.Name</td>
+                <td>@holiday.Date.DayOfWeek.ToString().Substring(0, 3) @holiday.Date.Day/@holiday.Date.Month/@holiday.Date.Year</td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,50 @@
+﻿@model IEnumerable<OneCasa.Models.ViewModels.Employee>
+@Html.Action("GetEvents")
+<div class="jumbotron container  shadow p-3 mb-5 bg-white rounded" id="Emp-table-div">
+    <h5 style="float: left;">List Of Employees</h5>
+    <div style="float: right;">
+        <input type="text" name="Search" id="search" placeholder="Search">
+        <button type="button" class="btn btn-info">Search</button>
+    </div>    <div class="table-responsive">
+        <table class="table clr table-bordered" id="Emp-table">
+            <thead>
+            <td>
+                @Html.DisplayNameFor(e => e.EmpId)
+            </td>
+            <td>
+                @Html.DisplayNameFor(e => e.EmpName)
+            </td>
+            <td>
+                @Html.DisplayNameFor(e => e.Department)
+            </td>
+            <td>
+                @Html.DisplayNameFor(e => e.Email)
+            </td>
+            <td>
+                @Html.DisplayNameFor(e => e.PhoneNumber)
+            </td>
+            <td>
+                @Html.DisplayNameFor(e => e.Manager)
+            </td>
+            </thead>
+            <tbody id="Emp-tbody">
+                @foreach (var emp in Model)
+                {
+                    <tr>
+                        <td>@emp.EmpId</td>
+                        <td>@emp.EmpName</td>
+                        <td>@emp.Department</td>
+                        <td>@emp.Email</td>
+                        <td>@emp.PhoneNumber</td>
+                        <td>
+                            @emp.Manager
+                            |@Html.ActionLink("Edit", "EditEmployee", "home", new { empid = emp.EmpId }, new { @class = "btn btn-link" })
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="clr"></div>
+<script src="~/scripts/customjs/employee.js"></script>

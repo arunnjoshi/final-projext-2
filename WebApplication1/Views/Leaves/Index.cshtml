@@ -1,0 +1,197 @@
+﻿@using System.Web.UI.WebControls
+@using System.Collections
+@using OneCasa.Models.ViewModels
+@model IEnumerable<OneCasa.Models.ViewModels.Leave>
+@{
+    ViewBag.Title = "title";
+    string[] months = new string[] {"January", "February", "March", "April", "May",
+        "June", "July", "August", "September", "October", "November", "December"};
+
+
+    IEnumerable list;
+    list = new List<ListItem>
+{
+        new ListItem{Text = "Full Day",Value = "fullday"},
+        new ListItem{Text = "Half Day",Value = "halfday"},
+        new ListItem{Text = "Birth Day",Value = "birthday"},
+        new ListItem{Text = "Paternity",Value = "Paternity"},
+    };
+    SelectList leaveType = new SelectList(list, "value", "text");
+}
+<div class="container  shadow p-3 mb-5 bg-white rounded LeaveContainer">
+    <div class="LeavesIndex container">
+        <ul>
+            <li><button type="button" class="btn btn-light LeaveMenu" value="viewLeaves">View Leaves</button></li>
+            <li><button type="button" class="btn btn-light LeaveMenu" value="ApplyLeaves">Apply Leaves</button></li>
+            <li><button type="button" class="btn btn-light LeaveMenu" value="PendingLeaves">Pending Leaves</button></li>
+            <li><button type="button" class="btn btn-light LeaveMenu" value="LeavesStatus">Approved/Pending/Canceled Leaves</button></li>
+            <li><button type="button" class="btn btn-light LeaveMenu" value="PublicHolidays">Public Holidays List</button></li>
+        </ul>
+        <div class="clr"></div>
+    </div>
+    <div id="viewLeaves">
+        <table class="table  table-bordered table-striped leave-table">
+            <thead>
+            <td>EmployeeName</td>
+            <td>Department Name</td>
+            @for (var d = DateTime.Now.AddDays(-15); d <= DateTime.Now.AddDays(15); d = d.AddDays(1))
+            {
+                <td>
+                    @months[@d.Month - 1].Substring(0, 3)
+                    @d.GetDateTimeFormats()[2].Substring(3, 2)
+                </td>
+            }
+            </thead>
+            <tbody>
+                @foreach (var leave in Model)
+                {
+                    <tr>
+                        <td>@leave.EmpName</td>
+                        <td>@leave.Department</td>
+                        @for (var d = DateTime.Today.AddDays(-15); d <= DateTime.Today.AddDays(15); d = d.AddDays(1))
+                        {
+                            if (false)
+                            {
+                                <td>O</td>
+                            }
+                            else if (d.DayOfWeek.ToString() == "Saturday" || d.DayOfWeek.ToString() == "Sunday")
+                            {
+                                <td class="week-ends"></td>
+                            }
+                            else if (d >= leave.FromDate && d <= leave.ToDate)
+                            {
+                                <td class="leave-cell">
+                                    T
+                                    <div class="hide">
+                                        <div>
+                                            <table class="table table-bordered  ">
+                                                <tbody>
+                                                    <tr>
+                                                        <th>Employee Name</th>
+                                                        <td>@leave.EmpName</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Comment</th>
+                                                        <td>@leave.Comment</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Leave Type</th>
+                                                        <td>@leave.LeaveType</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>From Date/To Date</th>
+                                                        <td>
+                                                            @{
+                                                                string str = @leave.DayCount > 1 ? "day's" : "day";
+                                                                int i = 0;
+                                                            }
+                                                            @leave.FromDate.GetDateTimeFormats()[99] To @leave.ToDate.GetDateTimeFormats()[99]<br />
+                                                            @*                                                           @for( i=0;i < 133;i+=1) *@
+                                                            @*                                                           { *@
+                                                            @*                                                                <span>@i</span> @leave.ToDate.GetDateTimeFormats()[i]; <br> *@
+                                                            @*                                                           } *@
+                                                            @leave.DayCount office @str
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Status</th>
+                                                        <td>@leave.LeaveStatus</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </td>
+                            }
+                            else
+                            {
+                                <td></td>
+                            }
+                        }
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+
+
+    <div id="ApplyLeaves">
+        <h5 class="text-center">Apply Leaves</h5>
+        @Html.Action("ApplyLeave", "Leaves")
+
+    </div>
+
+
+    <div id="PendingLeaves">
+        <h5 class="text-center">Pending Leaves</h5>
+        <div class="container pending-leaves">
+            <table class="table table-bordered table-striped leave-table">
+                <thead>
+                <th>From Date</th>
+                <th>To Date</th>
+                <th>Leave Type</th>
+                <th>Comment</th>
+                <th>Leave Status</th>
+                <th>Edit/Cancel Leave</th>
+                </thead>
+                <tbody>
+                    <tr><td class="text-center" colspan="6">No data</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div id="LeavesStatus">
+        <h5 class="text-center">Leaves History</h5>
+        <div class="container leave-history">
+            <table class="table table-bordered table-striped leave-table">
+                <thead>
+                <th>From Date</th>
+                <th>To Date</th>
+                <th>Leave Type</th>
+                <th>Comment</th>
+                <th>Leave Status</th>
+                </thead>
+                <tbody>
+                    <tr><td class="text-center" colspan="5">No data</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div id="PublicHolidays" class="container">
+        @Html.Partial("_PublicHoliday")
+    </div>
+</div>
+
+
+
+
+
+<!-- The Modal -->
+<div class="modal" id="aboutLeaveModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Leave Information</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                Modal body..
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+<script src="~/Scripts/bootstrap.bundle.js"></script>
+<script src="~/Scripts/bootstrap.js"></script>
+<script src="~/Scripts/CustomJs/Leave.js"></script>
