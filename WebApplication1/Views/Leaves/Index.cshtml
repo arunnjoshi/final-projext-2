@@ -133,7 +133,7 @@
                 <th>Leave Type</th>
                 <th>Comment</th>
                 <th>Leave Status</th>
-                <th>Edit/Cancel Leave</th>
+                <th>Edit | Cancel Leave</th>
                 </thead>
                 <tbody>
                     <tr><td class="text-center" colspan="6">No data</td></tr>
@@ -169,7 +169,7 @@
 
 
 <!-- The Modal -->
-<div class="modal" id="aboutLeaveModal">
+<div class="modal fade" id="aboutLeaveModal">
     <div class="modal-dialog">
         <div class="modal-content">
 
@@ -192,6 +192,36 @@
         </div>
     </div>
 </div>
-<script src="~/Scripts/bootstrap.bundle.js"></script>
-<script src="~/Scripts/bootstrap.js"></script>
+
+<!-- set up the modal to start hidden and fade in and out -->
+<div id="myModal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                 <button type="button" class="close" data-dismiss="modal">&times</button>
+            </div>
+            <!-- dialog body -->
+            <div class="modal-body">
+                Are You Sure To Cancel Your Leave
+            </div>
+            <!-- dialog buttons -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger ok-btn">OK</button>
+                <button type="button" class="btn btn-success"  data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+        
+<!-- sometime later, probably inside your on load event callback -->
+
+
+
 <script src="~/Scripts/CustomJs/Leave.js"></script>
+
+
+
+
+
+
+

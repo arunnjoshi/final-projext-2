@@ -134,6 +134,17 @@ namespace OneCasa.DataAccess
             return leaves;
         }
 
+        public void CancelLeave(Leave leave)
+        {
+            DBParameters.Clear();
+            AddParameter("@emailId",leave.Email);
+            AddParameter("@startdate ",leave.FromDate);
+            AddParameter("@enddate",leave.ToDate);
+            ExecuteDataSet("sp_CancelLeave");
+            // ExecuteScalar("sp_CancelLeave");
+        }
+        
+
         
     }
 }

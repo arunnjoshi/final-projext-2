@@ -1,5 +1,4 @@
 ﻿var mail = $("#Email").val();
-
 $(".LeaveMenu").click(function () {
     $("#viewLeaves").hide();
     $("#ApplyLeaves").hide();
@@ -28,17 +27,19 @@ $.ajax({
 
         // console.log(response);
         if (response.length != 0) {
+            let leave = {};
             let html = "<tr>";
             $.each(response, function (indexInArray, valueOfElement) {
                 let fromDate = new Date(parseInt(valueOfElement.FromDate.replace('/Date(', '')));
                 let todate = new Date(parseInt(valueOfElement.ToDate.replace('/Date(', '')));
                 html += `
-                 <td>${ fromDate.getDate()}/${fromDate.getMonth()}/${fromDate.getFullYear()}</td>
-                 <td>${ todate.getDate()}/${todate.getMonth()}/${todate.getFullYear()}</td>
+                 <td>${fromDate.toDateString()}</td>
+                 <td>${ todate.toDateString()}</td>
                  <td>${valueOfElement.LeaveType}</td>
                  <td>${valueOfElement.Comment}</td>
                  <td>${valueOfElement.LeaveStatus}</td>
-                 <td><input type="button" value="Edit" class="btn btn-link"> | <input type="button" value="Cancel Leave" class="btn btn-link"></td>
+                 <td>
+                    <input type="button" value="Cancel Leave" class="btn btn-link cancel-btn" ></td>
                  </tr>
                  `;
             });
@@ -48,13 +49,55 @@ $.ajax({
 });
 
 
+$('.pending-leaves table tbody').on('click', '.cancel-btn', function() 
+{
+    let tableCell= $(this).parent(0).parent(0).children();
+    
+    let leave={
+        "FromDate" : tableCell[0].innerText,
+        "ToDate" : tableCell[1].innerText,
+        "LeaveType": tableCell[2].innerText,
+        "Comment": tableCell[3].innerText,
+        "LeaveStatus": tableCell[4].innerText,
+    };
+
+    $("#myModal").modal({                   
+        "backdrop"  : "static",
+        "keyboard"  : true,
+        "show"      : true                     
+    });
+    
+    
+   
+    $("#myModal").on("click",".ok-btn",function (e) {
+        $.post("/leaves/CancelLeave",leave,function (e,res) {
+            // console.log(res);
+            // console.log(e);
+            window.location.replace("");
+        });
+    });
+    // console.log(tableCell);
+    // console.log(leave);
+    
+});
+
+
+
+$('.pending-leaves table tbody').on('click', '.edit-btn', function() {
+   console.log("yo"); 
+  
+});
+
+
+
+
 
 $.ajax({
     url:`/Leaves/GetLeaveHistory?emailId=${mail}`,
     method:"GET",
     dataType: "Json",
     success: function (response) {
-         console.log(response);
+         //console.log(response);
         if (response.length != 0)
         {
             let html = "<tr>";
@@ -62,8 +105,8 @@ $.ajax({
                 let fromDate = new Date(parseInt(valueOfElement.FromDate.replace('/Date(', '')));
                 let todate = new Date(parseInt(valueOfElement.ToDate.replace('/Date(', '')));
                 html += `
-             <td>${ fromDate.getDate()}/${fromDate.getMonth()}/${fromDate.getFullYear()}</td>
-             <td>${ todate.getDate()}/${todate.getMonth()}/${todate.getFullYear()}</td>
+             <td>${fromDate.toDateString()}</td>
+             <td>${todate.toDateString()}</td>
              <td>${valueOfElement.LeaveType}</td>
              <td>${valueOfElement.Comment}</td>
              <td>${valueOfElement.LeaveStatus}</td>
@@ -74,4 +117,26 @@ $.ajax({
         }
     }
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

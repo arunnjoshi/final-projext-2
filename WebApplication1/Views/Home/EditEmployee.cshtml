@@ -14,7 +14,7 @@
 
 <div class="container shadow p-3 mb-5 bg-white rounded">
     <h4 class="text-center">Add Employee Form</h4>
-    @using (Html.BeginForm("EditEmployee", "home", null, FormMethod.Post, new { @class = "form-horizontal" }))
+    @using (Html.BeginForm("EditEmployee", "home", null, FormMethod.Post, new { @class = "form-horizontal" ,id="edit-form"}))
     {
         <div class="form-group">
             <label>@Html.DisplayNameFor(e => e.EmpId)</label>
@@ -107,10 +107,46 @@
             @Html.TextBoxFor(e => e.JoinDate, "{0:yyyy-MM-dd}", new { @value = DateTime.Now.ToShortDateString(), @class = "form-control", @PlaceHolder = "date of birth", type = "date" })
             @Html.ValidationMessageFor(e => e.JoinDate, "", new { @class = "text-danger" })
         </div>
-        <button type="submit" class="btn btn-primary">Save</button>
+        <button type="button" class="btn btn-primary" id="submit-btn">Save</button>
 
     }
 </div>
-<script src="~/Scripts/jquery-3.3.1.js"></script>
-<script src="~/Scripts/jquery.validate.js"></script>
-<script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+
+
+<div id="myModal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <!-- dialog body -->
+            <div class="modal-body">
+                Are You Sure To Save Details
+            </div>
+            <!-- dialog buttons -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger ok-btn">OK</button>
+                <button type="button" class="btn btn-success"  data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<script >
+    $("#submit-btn").on("click",function(){
+        $("#myModal").modal({
+         "backdrop"  : "static",
+          "keyboard"  : true,
+          "show"      : true     
+        });
+    });
+   $(".ok-btn").on("click",function() {
+     $("#edit-form").submit();
+   })
+</script>
+
+@Scripts.Render("~/bundles/jqueryval")
+

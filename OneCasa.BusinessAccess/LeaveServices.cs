@@ -63,7 +63,18 @@ namespace OneCasa.BusinessAccess
             this.Start(false);
             return leave;
         }
-        
+
+
+
+        public void CancelLeave(Leave leave)
+        {
+            this.operation = () =>
+            {
+                LeaveRepopsitory access = new LeaveRepopsitory(this.Transaction);
+                access.CancelLeave(leave);
+            };
+            this.Start(false);
+        }
 
     }
 }

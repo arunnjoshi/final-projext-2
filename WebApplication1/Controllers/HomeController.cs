@@ -47,7 +47,7 @@ namespace OneCasa.Controllers
         public ActionResult GetEmployees()
         {
             var emp = _objEmployeeService.GetEmployeeData();
-            if (User.IsInRole(RoleName.Admin) || User.IsInRole(RoleName.HR))
+            if (User.IsInRole(RoleName.Admin) || User.IsInRole(RoleName.Hr))
             {
                 return View(emp);
             }
@@ -61,7 +61,7 @@ namespace OneCasa.Controllers
             return Json(emp, JsonRequestBehavior.AllowGet);
         }
         [HttpGet]
-        [Authorize(Roles = RoleName.Admin+","+RoleName.HR)]
+        [Authorize(Roles = RoleName.Admin+","+RoleName.Hr)]
         public ActionResult AddEmployee()
         {
             var dep = _objEmployeeService.GetDepartments();
@@ -71,7 +71,7 @@ namespace OneCasa.Controllers
         }
 
         [HttpPost]
-        [Authorize(Roles = RoleName.Admin + "," + RoleName.HR)]
+        [Authorize(Roles = RoleName.Admin + "," + RoleName.Hr)]
         public ActionResult AddEmployee(EmployeeAddress emp)
         {
             try
@@ -85,7 +85,7 @@ namespace OneCasa.Controllers
             }
         }
 
-        [Authorize(Roles = RoleName.Admin + "," + RoleName.HR)]
+        [Authorize(Roles = RoleName.Admin + "," + RoleName.Hr)]
         public ActionResult EditEmployee(int empid)
         {
             var dep = _objEmployeeService.GetDepartments();
@@ -97,7 +97,7 @@ namespace OneCasa.Controllers
         }
 
         [HttpPost]
-        [Authorize(Roles = RoleName.Admin + "," + RoleName.HR)]
+        [Authorize(Roles = RoleName.Admin + "," + RoleName.Hr)]
         public ActionResult EditEmployee(EmployeeAddress emp)
         {
             try
