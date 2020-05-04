@@ -47,6 +47,7 @@ namespace OneCasa.Controllers
         public ActionResult GetEmployees()
         {
             var emp = _objEmployeeService.GetEmployeeData();
+            //Edit option for Admin or hr
             if (User.IsInRole(RoleName.Admin) || User.IsInRole(RoleName.Hr))
             {
                 return View(emp);
@@ -55,14 +56,14 @@ namespace OneCasa.Controllers
         }
 
         [HttpGet]
-        public JsonResult GetSearchEmployees()
+        public JsonResult GetSearchEmployees()     //for searching using js in employees
         {
             var emp = _objEmployeeService.GetEmployeeData();
             return Json(emp, JsonRequestBehavior.AllowGet);
         }
         [HttpGet]
         [Authorize(Roles = RoleName.Admin+","+RoleName.Hr)]
-        public ActionResult AddEmployee()
+        public ActionResult AddEmployee() 
         {
             var dep = _objEmployeeService.GetDepartments();
             SelectList departments = new SelectList(dep, "depid", "DepartmentName");

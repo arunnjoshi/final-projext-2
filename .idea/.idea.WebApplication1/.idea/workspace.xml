@@ -3,49 +3,30 @@
   <component name="ChangeListManager">
     <list default="true" id="0a9e8cbe-b622-4b6d-81c5-f55148d15d8f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WebApplication1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebApplication1/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/WebApplication1/v16/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/WebApplication1/v16/.suo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/WebApplication1/v16/Server/sqlite3/storage.ide" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/WebApplication1/v16/Server/sqlite3/storage.ide" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OneCasa.BusinessAccess/LeaveServices.cs" beforeDir="false" afterPath="$PROJECT_DIR$/OneCasa.BusinessAccess/LeaveServices.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OneCasa.BusinessAccess/EmployeeService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/OneCasa.BusinessAccess/EmployeeService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/OneCasa.BusinessAccess/bin/Debug/OneCasa.BusinessAccess.dll" beforeDir="false" afterPath="$PROJECT_DIR$/OneCasa.BusinessAccess/bin/Debug/OneCasa.BusinessAccess.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/OneCasa.BusinessAccess/bin/Debug/OneCasa.BusinessAccess.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/OneCasa.BusinessAccess/bin/Debug/OneCasa.BusinessAccess.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OneCasa.BusinessAccess/bin/Debug/OneCasa.DataAccess.dll" beforeDir="false" afterPath="$PROJECT_DIR$/OneCasa.BusinessAccess/bin/Debug/OneCasa.DataAccess.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OneCasa.BusinessAccess/bin/Debug/OneCasa.DataAccess.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/OneCasa.BusinessAccess/bin/Debug/OneCasa.DataAccess.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OneCasa.BusinessAccess/bin/Debug/OneCasa.Models.dll" beforeDir="false" afterPath="$PROJECT_DIR$/OneCasa.BusinessAccess/bin/Debug/OneCasa.Models.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OneCasa.BusinessAccess/bin/Debug/OneCasa.Models.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/OneCasa.BusinessAccess/bin/Debug/OneCasa.Models.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/OneCasa.BusinessAccess/obj/Debug/OneCasa.BusinessAccess.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/OneCasa.BusinessAccess/obj/Debug/OneCasa.BusinessAccess.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/OneCasa.BusinessAccess/obj/Debug/OneCasa.BusinessAccess.dll" beforeDir="false" afterPath="$PROJECT_DIR$/OneCasa.BusinessAccess/obj/Debug/OneCasa.BusinessAccess.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/OneCasa.BusinessAccess/obj/Debug/OneCasa.BusinessAccess.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/OneCasa.BusinessAccess/obj/Debug/OneCasa.BusinessAccess.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OneCasa.DataAccess/LeaveRepopsitory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/OneCasa.DataAccess/LeaveRepopsitory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OneCasa.DataAccess/bin/Debug/OneCasa.DataAccess.dll" beforeDir="false" afterPath="$PROJECT_DIR$/OneCasa.DataAccess/bin/Debug/OneCasa.DataAccess.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OneCasa.DataAccess/bin/Debug/OneCasa.DataAccess.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/OneCasa.DataAccess/bin/Debug/OneCasa.DataAccess.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OneCasa.DataAccess/bin/Debug/OneCasa.Models.dll" beforeDir="false" afterPath="$PROJECT_DIR$/OneCasa.DataAccess/bin/Debug/OneCasa.Models.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OneCasa.DataAccess/bin/Debug/OneCasa.Models.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/OneCasa.DataAccess/bin/Debug/OneCasa.Models.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OneCasa.DataAccess/obj/Debug/OneCasa.DataAccess.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/OneCasa.DataAccess/obj/Debug/OneCasa.DataAccess.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OneCasa.DataAccess/obj/Debug/OneCasa.DataAccess.dll" beforeDir="false" afterPath="$PROJECT_DIR$/OneCasa.DataAccess/obj/Debug/OneCasa.DataAccess.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OneCasa.DataAccess/obj/Debug/OneCasa.DataAccess.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/OneCasa.DataAccess/obj/Debug/OneCasa.DataAccess.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/OneCasa.Models/UserRoles/RoleName.cs" beforeDir="false" afterPath="$PROJECT_DIR$/OneCasa.Models/UserRoles/RoleName.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OneCasa.Models/bin/Debug/OneCasa.Models.dll" beforeDir="false" afterPath="$PROJECT_DIR$/OneCasa.Models/bin/Debug/OneCasa.Models.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OneCasa.Models/bin/Debug/OneCasa.Models.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/OneCasa.Models/bin/Debug/OneCasa.Models.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OneCasa.Models/obj/Debug/OneCasa.Models.dll" beforeDir="false" afterPath="$PROJECT_DIR$/OneCasa.Models/obj/Debug/OneCasa.Models.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OneCasa.Models/obj/Debug/OneCasa.Models.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/OneCasa.Models/obj/Debug/OneCasa.Models.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OneCasa.Models/ViewModels/Employee.cs" beforeDir="false" afterPath="$PROJECT_DIR$/OneCasa.Models/ViewModels/Employee.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OneCasa.Models/ViewModels/EmployeeAddress.cs" beforeDir="false" afterPath="$PROJECT_DIR$/OneCasa.Models/ViewModels/EmployeeAddress.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OneCasa.Models/ViewModels/Events.cs" beforeDir="false" afterPath="$PROJECT_DIR$/OneCasa.Models/ViewModels/Events.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OneCasa.Models/ViewModels/Leave.cs" beforeDir="false" afterPath="$PROJECT_DIR$/OneCasa.Models/ViewModels/Leave.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebApplication1/App_Data/aspnet-WebApplication1-20200430120220.mdf" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/App_Data/aspnet-WebApplication1-20200430120220.mdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebApplication1/App_Data/aspnet-WebApplication1-20200430120220_log.ldf" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/App_Data/aspnet-WebApplication1-20200430120220_log.ldf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApplication1/Content/CustomCss/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/Content/CustomCss/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebApplication1/Controllers/HomeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/Controllers/HomeController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebApplication1/Controllers/LeavesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/Controllers/LeavesController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApplication1/Scripts/CustomJs/Employee.js" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/Scripts/CustomJs/Employee.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApplication1/Scripts/CustomJs/EmployeeUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/Scripts/CustomJs/EmployeeUser.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebApplication1/Scripts/CustomJs/Leave.js" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/Scripts/CustomJs/Leave.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApplication1/Views/Home/EditEmployee.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/Views/Home/EditEmployee.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApplication1/Scripts/CustomJs/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/Scripts/CustomJs/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebApplication1/Views/Leaves/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/Views/Leaves/Index.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebApplication1/Views/Leaves/_ApplyLeave.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/Views/Leaves/_ApplyLeave.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApplication1/Views/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/Views/Shared/_Layout.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApplication1/Views/Shared/_layoutAdmin.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/Views/Shared/_layoutAdmin.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApplication1/Views/_ViewStart.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/Views/_ViewStart.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApplication1/Views/Leaves/_PublicHoliday.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/Views/Leaves/_PublicHoliday.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebApplication1/bin/OneCasa.BusinessAccess.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/bin/OneCasa.BusinessAccess.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebApplication1/bin/OneCasa.BusinessAccess.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/bin/OneCasa.BusinessAccess.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApplication1/bin/OneCasa.DataAccess.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/bin/OneCasa.DataAccess.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApplication1/bin/OneCasa.DataAccess.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/bin/OneCasa.DataAccess.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApplication1/bin/OneCasa.Models.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/bin/OneCasa.Models.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApplication1/bin/OneCasa.Models.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/bin/OneCasa.Models.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebApplication1/bin/WebApplication1.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/bin/WebApplication1.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebApplication1/bin/WebApplication1.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/bin/WebApplication1.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebApplication1/obj/Debug/OneCasa.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebApplication1/obj/Debug/OneCasa.csprojAssemblyReference.cache" afterDir="false" />
@@ -62,42 +43,62 @@
     <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/OneCasa.BusinessAccess/LeaveServices.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebApplication1/App_Start/BundleConfig.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebApplication1/Controllers/ManageController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebApplication1/Controllers/AccountController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebApplication1/Views/_ViewStart.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebApplication1/Controllers/HomeController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebApplication1/Controllers/LeavesController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApplication1/Views/Account/ExternalLoginConfirmation.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApplication1/Models/ManageViewModels.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/OneCasa.DataAccess/LeaveRepopsitory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/OneCasa.DataAccess/BaseDataAccess.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebApplication1/Views/Home/GetEmployees.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/OneCasa.DataAccess/EmplyeeRepopsitory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebApplication1/Views/Home/EditEmployee.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebApplication1/Views/Leaves/Index.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApplication1/Views/Leaves/_PublicHoliday.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebApplication1/Views/Leaves/_ApplyLeave.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/OneCasa.Models/UserRoles/RoleName.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebApplication1/Views/Shared/_layoutAdmin.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebApplication1/Views/Shared/_Layout.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/OneCasa.BusinessAccess/LeaveServices.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/OneCasa.BusinessAccess/EmployeeService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApplication1/Views/Account/ConfirmEmail.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApplication1/Views/Account/ExternalLoginConfirmation.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApplication1/Models/ManageViewModels.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApplication1/Models/AccountViewModels.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/OneCasa.Models/ViewModels/Employee.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/OneCasa.Models/ViewModels/Department.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/OneCasa.Models/ViewModels/Leave.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/OneCasa.Models/ViewModels/Events.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/OneCasa.Models/ViewModels/PublicHolidays.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/OneCasa.Models/ViewModels/EmployeeAddress.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/WebApplication1/Controllers/ManageController.cs" />
         <option value="$PROJECT_DIR$/WebApplication1/Controllers/AccountController.cs" />
-        <option value="$PROJECT_DIR$/OneCasa.Models/UserRoles/RoleName.cs" />
         <option value="$PROJECT_DIR$/OneCasa.BusinessAccess/LeaveServices.cs" />
-        <option value="$PROJECT_DIR$/WebApplication1/Views/Leaves/_ApplyLeave.cshtml" />
         <option value="$PROJECT_DIR$/OneCasa.DataAccess/LeaveRepopsitory.cs" />
-        <option value="$PROJECT_DIR$/WebApplication1/Scripts/CustomJs/Leave.js" />
-        <option value="$PROJECT_DIR$/WebApplication1/Controllers/LeavesController.cs" />
-        <option value="$PROJECT_DIR$/WebApplication1/Views/Leaves/Index.cshtml" />
         <option value="$PROJECT_DIR$/WebApplication1/Views/Home/EditEmployee.cshtml" />
         <option value="$PROJECT_DIR$/WebApplication1/Content/CustomCss/style.css" />
         <option value="$PROJECT_DIR$/WebApplication1/Views/Shared/_layoutAdmin.cshtml" />
         <option value="$PROJECT_DIR$/WebApplication1/Views/Shared/_Layout.cshtml" />
+        <option value="$PROJECT_DIR$/WebApplication1/Views/Leaves/_ApplyLeave.cshtml" />
+        <option value="$PROJECT_DIR$/WebApplication1/Views/Leaves/_PublicHoliday.cshtml" />
+        <option value="$PROJECT_DIR$/WebApplication1/Controllers/HomeController.cs" />
+        <option value="$PROJECT_DIR$/WebApplication1/Controllers/LeavesController.cs" />
+        <option value="$PROJECT_DIR$/OneCasa.BusinessAccess/EmployeeService.cs" />
+        <option value="$PROJECT_DIR$/OneCasa.Models/ViewModels/Employee.cs" />
+        <option value="$PROJECT_DIR$/OneCasa.Models/ViewModels/EmployeeAddress.cs" />
+        <option value="$PROJECT_DIR$/OneCasa.Models/ViewModels/Events.cs" />
+        <option value="$PROJECT_DIR$/OneCasa.Models/ViewModels/Leave.cs" />
+        <option value="$PROJECT_DIR$/OneCasa.Models/UserRoles/RoleName.cs" />
+        <option value="$PROJECT_DIR$/WebApplication1/Scripts/CustomJs/app.js" />
+        <option value="$PROJECT_DIR$/WebApplication1/Scripts/CustomJs/EmployeeUser.js" />
+        <option value="$PROJECT_DIR$/WebApplication1/Scripts/CustomJs/Employee.js" />
+        <option value="$PROJECT_DIR$/WebApplication1/Scripts/CustomJs/Leave.js" />
+        <option value="$PROJECT_DIR$/WebApplication1/Views/Leaves/Index.cshtml" />
       </list>
     </option>
   </component>
@@ -161,6 +162,12 @@
       <workItem from="1588322070518" duration="4255000" />
       <workItem from="1588338263104" duration="18575000" />
       <workItem from="1588400457727" duration="4779000" />
+      <workItem from="1588426707438" duration="69000" />
+      <workItem from="1588426846159" duration="23000" />
+      <workItem from="1588491912578" duration="3399000" />
+      <workItem from="1588505303646" duration="620000" />
+      <workItem from="1588520816468" duration="3064000" />
+      <workItem from="1588563694978" duration="2519000" />
     </task>
     <servers />
   </component>
@@ -195,90 +202,90 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="363" y="99" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1366.728@0.0.1366.728" timestamp="1588402424018" />
-    <state width="400" height="466" key="DebuggerActiveHint" timestamp="1588342273110">
+    <state width="408" height="466" key="DebuggerActiveHint" timestamp="1588493839572">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="400" height="466" key="DebuggerActiveHint/0.0.1366.728@0.0.1366.728" timestamp="1588342273110" />
-    <state width="1323" height="178" key="GridCell.Tab.0.bottom" timestamp="1588405877774">
+    <state width="408" height="466" key="DebuggerActiveHint/0.0.1366.728@0.0.1366.728" timestamp="1588493839572" />
+    <state width="1323" height="178" key="GridCell.Tab.0.bottom" timestamp="1588524597416">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="178" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1588405877774" />
-    <state width="1323" height="178" key="GridCell.Tab.0.center" timestamp="1588405877774">
+    <state width="1323" height="178" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1588524597416" />
+    <state width="1323" height="178" key="GridCell.Tab.0.center" timestamp="1588524597416">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="178" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1588405877774" />
-    <state width="1323" height="178" key="GridCell.Tab.0.left" timestamp="1588405877774">
+    <state width="1323" height="178" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1588524597416" />
+    <state width="1323" height="178" key="GridCell.Tab.0.left" timestamp="1588524597416">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="178" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1588405877774" />
-    <state width="1323" height="178" key="GridCell.Tab.0.right" timestamp="1588405877774">
+    <state width="1323" height="178" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1588524597416" />
+    <state width="1323" height="178" key="GridCell.Tab.0.right" timestamp="1588524597416">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="178" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1588405877774" />
-    <state width="1323" height="223" key="GridCell.Tab.1.bottom" timestamp="1588359385747">
+    <state width="1323" height="178" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1588524597416" />
+    <state width="1323" height="223" key="GridCell.Tab.1.bottom" timestamp="1588495451047">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1588359385747" />
-    <state width="1323" height="223" key="GridCell.Tab.1.center" timestamp="1588359385746">
+    <state width="1323" height="223" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1588495451047" />
+    <state width="1323" height="223" key="GridCell.Tab.1.center" timestamp="1588495451047">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1588359385746" />
-    <state width="1323" height="223" key="GridCell.Tab.1.left" timestamp="1588359385746">
+    <state width="1323" height="223" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1588495451047" />
+    <state width="1323" height="223" key="GridCell.Tab.1.left" timestamp="1588495451047">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1588359385746" />
-    <state width="1323" height="223" key="GridCell.Tab.1.right" timestamp="1588359385746">
+    <state width="1323" height="223" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1588495451047" />
+    <state width="1323" height="223" key="GridCell.Tab.1.right" timestamp="1588495451047">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1588359385746" />
-    <state width="1323" height="223" key="GridCell.Tab.2.bottom" timestamp="1588359385747">
+    <state width="1323" height="223" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1588495451047" />
+    <state width="1323" height="223" key="GridCell.Tab.2.bottom" timestamp="1588495451048">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.2.bottom/0.0.1366.728@0.0.1366.728" timestamp="1588359385747" />
-    <state width="1323" height="223" key="GridCell.Tab.2.center" timestamp="1588359385747">
+    <state width="1323" height="223" key="GridCell.Tab.2.bottom/0.0.1366.728@0.0.1366.728" timestamp="1588495451048" />
+    <state width="1323" height="223" key="GridCell.Tab.2.center" timestamp="1588495451047">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.2.center/0.0.1366.728@0.0.1366.728" timestamp="1588359385747" />
-    <state width="1323" height="223" key="GridCell.Tab.2.left" timestamp="1588359385747">
+    <state width="1323" height="223" key="GridCell.Tab.2.center/0.0.1366.728@0.0.1366.728" timestamp="1588495451047" />
+    <state width="1323" height="223" key="GridCell.Tab.2.left" timestamp="1588495451047">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.2.left/0.0.1366.728@0.0.1366.728" timestamp="1588359385747" />
-    <state width="1323" height="223" key="GridCell.Tab.2.right" timestamp="1588359385747">
+    <state width="1323" height="223" key="GridCell.Tab.2.left/0.0.1366.728@0.0.1366.728" timestamp="1588495451047" />
+    <state width="1323" height="223" key="GridCell.Tab.2.right" timestamp="1588495451047">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1588359385747" />
-    <state width="1323" height="223" key="GridCell.Tab.3.bottom" timestamp="1588359385747">
+    <state width="1323" height="223" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1588495451047" />
+    <state width="1323" height="223" key="GridCell.Tab.3.bottom" timestamp="1588495451048">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.3.bottom/0.0.1366.728@0.0.1366.728" timestamp="1588359385747" />
-    <state width="1323" height="223" key="GridCell.Tab.3.center" timestamp="1588359385747">
+    <state width="1323" height="223" key="GridCell.Tab.3.bottom/0.0.1366.728@0.0.1366.728" timestamp="1588495451048" />
+    <state width="1323" height="223" key="GridCell.Tab.3.center" timestamp="1588495451048">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.3.center/0.0.1366.728@0.0.1366.728" timestamp="1588359385747" />
-    <state width="1323" height="223" key="GridCell.Tab.3.left" timestamp="1588359385747">
+    <state width="1323" height="223" key="GridCell.Tab.3.center/0.0.1366.728@0.0.1366.728" timestamp="1588495451048" />
+    <state width="1323" height="223" key="GridCell.Tab.3.left" timestamp="1588495451048">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.3.left/0.0.1366.728@0.0.1366.728" timestamp="1588359385747" />
-    <state width="1323" height="223" key="GridCell.Tab.3.right" timestamp="1588359385747">
+    <state width="1323" height="223" key="GridCell.Tab.3.left/0.0.1366.728@0.0.1366.728" timestamp="1588495451048" />
+    <state width="1323" height="223" key="GridCell.Tab.3.right" timestamp="1588495451048">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.3.right/0.0.1366.728@0.0.1366.728" timestamp="1588359385747" />
-    <state width="1323" height="223" key="GridCell.Tab.4.bottom" timestamp="1588359385747">
+    <state width="1323" height="223" key="GridCell.Tab.3.right/0.0.1366.728@0.0.1366.728" timestamp="1588495451048" />
+    <state width="1323" height="223" key="GridCell.Tab.4.bottom" timestamp="1588495451048">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.4.bottom/0.0.1366.728@0.0.1366.728" timestamp="1588359385747" />
-    <state width="1323" height="223" key="GridCell.Tab.4.center" timestamp="1588359385747">
+    <state width="1323" height="223" key="GridCell.Tab.4.bottom/0.0.1366.728@0.0.1366.728" timestamp="1588495451048" />
+    <state width="1323" height="223" key="GridCell.Tab.4.center" timestamp="1588495451048">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.4.center/0.0.1366.728@0.0.1366.728" timestamp="1588359385747" />
-    <state width="1323" height="223" key="GridCell.Tab.4.left" timestamp="1588359385747">
+    <state width="1323" height="223" key="GridCell.Tab.4.center/0.0.1366.728@0.0.1366.728" timestamp="1588495451048" />
+    <state width="1323" height="223" key="GridCell.Tab.4.left" timestamp="1588495451048">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.4.left/0.0.1366.728@0.0.1366.728" timestamp="1588359385747" />
-    <state width="1323" height="223" key="GridCell.Tab.4.right" timestamp="1588359385747">
+    <state width="1323" height="223" key="GridCell.Tab.4.left/0.0.1366.728@0.0.1366.728" timestamp="1588495451048" />
+    <state width="1323" height="223" key="GridCell.Tab.4.right" timestamp="1588495451048">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.4.right/0.0.1366.728@0.0.1366.728" timestamp="1588359385747" />
+    <state width="1323" height="223" key="GridCell.Tab.4.right/0.0.1366.728@0.0.1366.728" timestamp="1588495451048" />
     <state x="545" y="76" key="VCS.ChangeListViewerDialog" timestamp="1588322817305">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -287,28 +294,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="492" y="280" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1588324307716" />
-    <state x="339" y="17" width="672" height="676" key="search.everywhere.popup" timestamp="1588404369624">
+    <state x="339" y="17" width="672" height="676" key="search.everywhere.popup" timestamp="1588495429606">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="339" y="17" width="672" height="676" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1588404369624" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/OneCasa.DataAccess/LeaveRepopsitory.cs</url>
-          <line>137</line>
-          <properties documentPath="$PROJECT_DIR$/OneCasa.DataAccess/LeaveRepopsitory.cs" initialLine="137">
-            <startOffsets>
-              <option value="4874" />
-            </startOffsets>
-            <endOffsets>
-              <option value="4875" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <state x="339" y="17" width="672" height="676" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1588495429606" />
   </component>
 </project>

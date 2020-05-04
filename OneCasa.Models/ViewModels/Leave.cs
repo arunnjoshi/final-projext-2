@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace OneCasa.Models.ViewModels
 {
+    
     public class Leave
     {
         [Required]

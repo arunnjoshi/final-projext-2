@@ -1,4 +1,6 @@
-﻿var mail = $("#Email").val();
+﻿
+
+var mail = $("#Email").val();   //show the dive on button click
 $(".LeaveMenu").click(function () {
     $("#viewLeaves").hide();
     $("#ApplyLeaves").hide();
@@ -11,6 +13,7 @@ $(".LeaveMenu").click(function () {
     // console.log($(this).val());
 });
 
+
 $(".leave-cell").click(function (e) { 
     e.preventDefault();
     // console.log($(this).children()[0].innerHTML);
@@ -19,6 +22,7 @@ $(".leave-cell").click(function (e) {
 });
 
 
+//get pending leaves of user
 $.ajax({
     url:`/Leaves/getpendingLeaves?emailId=${mail}`,
     method:"GET",
@@ -39,7 +43,9 @@ $.ajax({
                  <td>${valueOfElement.Comment}</td>
                  <td>${valueOfElement.LeaveStatus}</td>
                  <td>
-                    <input type="button" value="Cancel Leave" class="btn btn-link cancel-btn" ></td>
+                       <a href="Leaves/EditLeave?fromDate=${fromDate.toDateString()}&toDate=${todate.toDateString()}">Edit</a> |
+                       <input type="button" value="Cancel Leave" class="btn btn-link cancel-btn" >
+                  </td>
                  </tr>
                  `;
             });
@@ -90,7 +96,7 @@ $('.pending-leaves table tbody').on('click', '.edit-btn', function() {
 
 
 
-
+//get all leaves of user
 
 $.ajax({
     url:`/Leaves/GetLeaveHistory?emailId=${mail}`,

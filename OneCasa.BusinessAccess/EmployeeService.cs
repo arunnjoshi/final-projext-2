@@ -11,13 +11,14 @@ namespace OneCasa.BusinessAccess
     {
         // frequently used data
         private readonly List<Employee>  _employeesDate;
-        private int day = 10;
+        
+        private int day = 10;  // days for events to get data from data base
         private LeaveServices _leaveServices;
 
         public   EmployeeService()
         {
             _leaveServices = new LeaveServices();
-            _employeesDate = _GetEmployeeData();
+            _employeesDate = _GetEmployeeData();    //get all employee user data in constructor because of use many time
         }
 
         private List<Employee> _GetEmployeeData()
@@ -34,6 +35,7 @@ namespace OneCasa.BusinessAccess
 
         public List<Events> GetUpcomingEvents()
         {
+            //upcoming birthdays
             List<Events> employees = GetEmployeeData().Where(e=> new DateTime(DateTime.Today.Year,e.DateOfBirth.Month,e.DateOfBirth.Day) <= DateTime.Today.AddDays(day) && 
                          new DateTime(DateTime.Today.Year,e.DateOfBirth.Month,e.DateOfBirth.Day) >= DateTime.Today)
                 .Select(e => new Events()
@@ -43,6 +45,7 @@ namespace OneCasa.BusinessAccess
                     Date = e.DateOfBirth,
                     EventDate = new DateTime(DateTime.Today.Year,e.DateOfBirth.Month,e.DateOfBirth.Day)
                 }).ToList();
+            //upcoming join events
             List<Events> ani = GetEmployeeData().Where(e =>
                 new DateTime(DateTime.Today.Year, e.JoinDate.Month, e.JoinDate.Day) <= DateTime.Today.AddDays(day) &&
                 new DateTime(DateTime.Today.Year, e.JoinDate.Month, e.JoinDate.Day) >= DateTime.Today &&
@@ -55,7 +58,7 @@ namespace OneCasa.BusinessAccess
                     EventDate = new DateTime(DateTime.Today.Year,e.JoinDate.Month,e.JoinDate.Day)   
                 }).ToList();
             employees.AddRange(ani);
-            
+            //upcoming public holidays
             List<Events> holidays = _leaveServices.GetPublicHolidays().
                 Where(h=> h.Date >= DateTime.Today && h.Date <= DateTime.Today.AddDays(day)).Select(h => new Events()
             {
@@ -69,6 +72,7 @@ namespace OneCasa.BusinessAccess
 
         public List<Events> GetPastEvents()
         {
+            //past birthdays
             List<Events> employees = GetEmployeeData().Where(e =>
                 new DateTime(DateTime.Today.Year, e.DateOfBirth.Month, e.DateOfBirth.Day) >=
                 DateTime.Today.AddDays(-day) &&
@@ -83,7 +87,7 @@ namespace OneCasa.BusinessAccess
                 .ToList();
             
             
-            
+            //past join events
             List<Events> ani = GetEmployeeData().Where(e =>
                 new DateTime(DateTime.Today.Year, e.JoinDate.Month, e.JoinDate.Day) > DateTime.Today.AddDays(-day) &&
                 new DateTime(DateTime.Today.Year, e.JoinDate.Month, e.JoinDate.Day) < DateTime.Today &&
@@ -97,7 +101,7 @@ namespace OneCasa.BusinessAccess
                 })
                 .ToList();
             employees.AddRange(ani);
-
+            //past public holidays
             List<Events> holidays = _leaveServices.GetPublicHolidays().Where(h=> h.Date < DateTime.Today && h.Date >= DateTime.Today.AddDays(-day)).Select(h => new Events()
             {
                 Name = h.Name,

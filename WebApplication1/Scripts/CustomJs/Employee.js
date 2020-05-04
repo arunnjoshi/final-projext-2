@@ -1,4 +1,7 @@
+// this script is for admin user
+
 let empObj={};
+//get all employees for search 
 $.ajax({
     url: "/Home/GetSearchEmployees",
     method:"GET",
@@ -17,11 +20,12 @@ $.ajax({
     },
 });  
 
-
+//searching of employees
 $("#search").keyup(function (e) {
     e.preventDefault();
     let search_str=$("#search").val().trim().toLowerCase();
-    if(search_str.length!=0)
+    //if search string is not null
+    if(search_str.length !== 0)
     {
       
         let html=``;
@@ -49,7 +53,8 @@ $("#search").keyup(function (e) {
         });
 
     }
-    else if(search_str.length == 0){
+    //for null string or white spaces
+    else if(search_str.length === 0){
         let html=``;
             $.each(empObj, function (indexInArray, emp) { 
                 {

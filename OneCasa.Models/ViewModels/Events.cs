@@ -2,6 +2,7 @@
 
 namespace OneCasa.Models.ViewModels
 {
+    //upcoming and past events model
     public class Events
     {
         public string EventName { get; set; }

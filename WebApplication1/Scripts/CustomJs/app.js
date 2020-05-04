@@ -1,4 +1,6 @@
 ﻿let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+//ajax req for upcoming events
 $.ajax({
         url: "/Home/GetUpcomingEvents",
         method:"GET",
@@ -14,13 +16,13 @@ $.ajax({
         success: function (response) 
         {
             let html=``;
-            console.log("yo");
-            
-            if(response.length!=0)
+            // console.log("yo");
+            //if response not equal null add events to div
+            if(response.length !== 0)
             {
                 $.each(response, function (indexInArray, valueOfElement) { 
 
-                    if(valueOfElement.EventName == "UpcomingBirthdays")
+                    if(valueOfElement.EventName === "UpcomingBirthdays")
                     {
                         let d=new Date(parseInt(  valueOfElement.Date.replace('/Date(', '')));
                             html+=`<li> <img src="../../Content/Images/birthday.png" alt="png" width=20px height=20px>
@@ -29,7 +31,7 @@ $.ajax({
                             ${new Date().getFullYear()}
                             </li><br/>`
                     }
-                    else if(valueOfElement.EventName == "UpcomingAnniversary")
+                    else if(valueOfElement.EventName === "UpcomingAnniversary")
                     {
                         let d=new Date(parseInt(  valueOfElement.Date.replace('/Date(', '')));
                             html+=`<li> <img src="../../Content/Images/anniversary.png" alt="png" width=20px height=20px>
@@ -37,7 +39,7 @@ $.ajax({
                             ${new Date().getFullYear()}
                             </li><br/>`
                     }
-                    else
+                    else  //for public holidays
                     {
                         let d=new Date(parseInt(  valueOfElement.EventDate.replace('/Date(', '')));
                             html+=`<li> <img src="../../Content/Images/holiday.png" alt="png" width=30px height=30px>
@@ -53,7 +55,7 @@ $.ajax({
 
 
 
-
+//ajax req for past events
 $.ajax({
     url: "/Home/GetPastEvents",
     method:"GET",
@@ -66,10 +68,10 @@ $.ajax({
     },
     success: function (response) {
         let html=``;
-        if(response.length!=0){
+        if(response.length !== 0){
         
             $.each(response, function (indexInArray, valueOfElement) { 
-                if(valueOfElement.EventName == "PastBirthdays")
+                if(valueOfElement.EventName === "PastBirthdays")
                 {
                     let d=new Date(parseInt(  valueOfElement.Date.replace('/Date(', '')));
                         html+=`<li> <img src="../../Content/Images/birthday.png" alt="png" width=20px height=20px>
@@ -78,7 +80,7 @@ $.ajax({
                         ${new Date().getFullYear()}
                         </li><br/>`
                 }
-                else if(valueOfElement.EventName == "PastAnniversary")
+                else if(valueOfElement.EventName === "PastAnniversary")
                 {
                     let d=new Date(parseInt(  valueOfElement.Date.replace('/Date(', '')));
                         html+=`<li> <img src="../../Content/Images/anniversary.png" alt="png" width=20px height=20px>
@@ -86,6 +88,7 @@ $.ajax({
                         ${new Date().getFullYear()}
                         </li><br/>`
                 }
+                //for past public holidays
                 else
                 {
                     let d=new Date(parseInt(  valueOfElement.EventDate.replace('/Date(', '')));

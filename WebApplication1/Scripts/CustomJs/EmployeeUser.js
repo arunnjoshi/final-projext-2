@@ -1,4 +1,5 @@
-﻿let empObj = {};
+﻿// this script is for user
+let empObj = {};
 $.ajax({
     url: "/Home/GetSearchEmployees",
     method: "GET",

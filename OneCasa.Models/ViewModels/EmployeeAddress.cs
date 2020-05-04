@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace OneCasa.Models.ViewModels
 {
+    //employee model for edit and add
     public class EmployeeAddress
     {
         [DisplayName("Employee Id")]

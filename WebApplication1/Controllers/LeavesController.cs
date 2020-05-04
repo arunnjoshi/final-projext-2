@@ -24,16 +24,16 @@ namespace OneCasa.Controllers
         {
 
             List<PublicHolidays> publicHolidayses = new List<PublicHolidays>();
-            publicHolidayses = _leaveServices.GetPublicHolidays();
+            publicHolidayses = _leaveServices.GetPublicHolidays();             //get public holidays
             ViewBag.PubluicHolidays = publicHolidayses;
-            List<Leave> leaves = _leaveServices.GetApplyedLeaves();
+            List<Leave> leaves = _leaveServices.GetApplyedLeaves();           //get applied leaves
             return View("Index", leaves);
         }
 
         [HttpGet]
         public ActionResult ApplyLeave()
         {
-            return View("_ApplyLeave");
+            return View("_ApplyLeave");          //apply leave partial view
         }
 
         [HttpPost]
@@ -51,13 +51,16 @@ namespace OneCasa.Controllers
                 return RedirectToAction("index");
             }
         }
-
+        
+        
+        //pending leaves of user
         public JsonResult GetPendingLeaves(string emailId)
         {
             var pendingLeaves = _leaveServices.GetLeaveStatus(User.Identity.GetUserName()).OrderBy(l=>l.FromDate).ThenBy(l=>l.ToDate);
             return Json(pendingLeaves, JsonRequestBehavior.AllowGet);
         }
 
+        //all leaves of user
         public JsonResult GetLeaveHistory(string emailId)
         {
             var leaveHistory = _leaveServices.GetLeaveHistory(emailId).OrderByDescending(l=>l.FromDate).ThenByDescending(l=>l.ToDate);
@@ -80,9 +83,10 @@ namespace OneCasa.Controllers
         
         // [HandleError]
         // [HttpGet]
-        // public ActionResult EditLeave(DateTime fromdate,DateTime todate)
+        // public ActionResult EditLeave(DateTime fromDate,DateTime toDate)
         // {
-        //     Leave leave =  _leaveServices.GetApplyedLeaves().FirstOrDefault(l => l.Email == User.Identity.GetUserName() && l.FromDate == fromdate && l.ToDate == todate);
+        //     Leave  leave =  _leaveServices.GetLeaveStatus(User.Identity.GetUserName()).FirstOrDefault(l => l.FromDate == fromDate && l.ToDate == toDate);
+        //     ViewBag.Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
         //     return View("_ApplyLeave", leave);
         // }
     }

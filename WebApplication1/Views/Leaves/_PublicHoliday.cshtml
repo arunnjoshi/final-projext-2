@@ -9,7 +9,9 @@
         {
             <tr>
                 <td>@holiday.Name</td>
-                <td>@holiday.Date.DayOfWeek.ToString().Substring(0, 3) @holiday.Date.Day/@holiday.Date.Month/@holiday.Date.Year</td>
+                <td>
+                    @holiday.Date.ToString(" ddd  dd-MMM-yyyy")
+                </td>
             </tr>
         }
     </tbody>

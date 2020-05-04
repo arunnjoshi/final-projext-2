@@ -62,6 +62,9 @@
                             {
                                 <td class="leave-cell">
                                     T
+                                    
+                                    @* hide user data for show in modal after cell click *@
+                                    
                                     <div class="hide">
                                         <div>
                                             <table class="table table-bordered  ">
@@ -100,7 +103,7 @@
                                                 </tbody>
                                             </table>
                                         </div>
-                                    </div>
+                                    </div>    
                                 </td>
                             }
                             else
@@ -114,15 +117,15 @@
         </table>
     </div>
 
-
-
+    
+    @* Apply leaves div *@
     <div id="ApplyLeaves">
         <h5 class="text-center">Apply Leaves</h5>
         @Html.Action("ApplyLeave", "Leaves")
 
     </div>
-
-
+    
+    @* pending leaves div *@
     <div id="PendingLeaves">
         <h5 class="text-center">Pending Leaves</h5>
         <div class="container pending-leaves">
@@ -136,11 +139,17 @@
                 <th>Edit | Cancel Leave</th>
                 </thead>
                 <tbody>
-                    <tr><td class="text-center" colspan="6">No data</td></tr>
+                <tr>
+                    
+                    <td class="text-center" colspan="6">No data</td>
+                </tr>
                 </tbody>
             </table>
         </div>
     </div>
+    
+    
+    @* leaves status div *@
     <div id="LeavesStatus">
         <h5 class="text-center">Leaves History</h5>
         <div class="container leave-history">
@@ -168,7 +177,7 @@
 
 
 
-<!-- The Modal -->
+<!-- The Modal for showing leave info-->
 <div class="modal fade" id="aboutLeaveModal">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -193,7 +202,7 @@
     </div>
 </div>
 
-<!-- set up the modal to start hidden and fade in and out -->
+@* modal for cancel leave *@
 <div id="myModal" class="modal fade">
     <div class="modal-dialog">
         <div class="modal-content">

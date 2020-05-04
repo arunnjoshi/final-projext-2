@@ -4,8 +4,12 @@
 @model OneCasa.Models.ViewModels.Leave
 @{
     IEnumerable list;
+    if (Layout == null)
+    {
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
     list = new List<ListItem>
-{
+    {
         new ListItem{Text = "Full Day",Value = "fullday"},
         new ListItem{Text = "Half Day",Value = "halfday"},
         new ListItem{Text = "Birth Day",Value = "birthday"},
@@ -38,7 +42,7 @@
                 {
                     @class = "form-control",
                     type = "date",
-                    Value = $"{DateTime.Now.Year}-{@DateTime.Now.GetDateTimeFormats()[2].Substring(0, 2)}-{@DateTime.Now.GetDateTimeFormats()[2].Substring(3, 2)}"
+                    Value = DateTime.Today.ToString("yyyy-MM-dd")
                 })
                 @Html.ValidationMessageFor(e => e.FromDate, "", new { @class = "text-danger" })
             </div>
@@ -50,7 +54,7 @@
                 {
                     @class = "form-control",
                     type = "date",
-                    Value = $"{DateTime.Now.Year}-{@DateTime.Now.GetDateTimeFormats()[2].Substring(0, 2)}-{@DateTime.Now.GetDateTimeFormats()[2].Substring(3, 2)}"
+                    Value = DateTime.Today.ToString("yyyy-MM-dd")
                 })
                 @Html.ValidationMessageFor(e => e.ToDate, "", new { @class = "text-danger" })
             </div>

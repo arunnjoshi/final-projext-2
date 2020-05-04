@@ -3,6 +3,7 @@ using System.ComponentModel;
 
 namespace OneCasa.Models.ViewModels
 {
+    //employee model 
     public class Employee
     {
         [DisplayName("Employee Id")]
